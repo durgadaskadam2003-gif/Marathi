@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Durgesh E Seva Kendra</title>
+<meta name="description" content="दुर्गेश ई सेवा केंद्र - सर्व शासकीय व ऑनलाइन सेवा एकाच ठिकाणी">
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#f5f7fb;color:#222}
+header{background:linear-gradient(135deg,#0d47a1,#1976d2);color:#fff;padding:20px;text-align:center;position:sticky;top:0}
+.hero{padding:60px 20px;text-align:center}
+.btn{display:inline-block;padding:12px 18px;margin:6px;background:#1976d2;color:#fff;text-decoration:none;border-radius:8px}
+.section{padding:30px 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.card{background:#fff;padding:16px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.1)}
+footer{background:#0d47a1;color:#fff;padding:20px;text-align:center}
+.search{width:100%;max-width:500px;padding:12px}
+</style>
+<script>
+function searchServices(){
+ let q=document.getElementById('search').value.toLowerCase();
+ document.querySelectorAll('.card').forEach(c=>{
+   c.style.display=c.innerText.toLowerCase().includes(q)?'block':'none';
+ });
+}
+function inquire(service){
+ let msg=encodeURIComponent("नमस्कार, मला "+service+" बाबत माहिती हवी आहे.");
+ window.open("https://wa.me/919834143691?text="+msg,"_blank");
+}
+</script>
+</head>
+<body>
+<header>
+<h1>दुर्गेश ई सेवा केंद्र</h1>
+<p>सर्व शासकीय व ऑनलाइन सेवा एकाच ठिकाणी</p>
+</header>
+
+<section class="hero">
+<h2>आंबड, नाशिक</h2>
+<p>जलद, सुरक्षित व विश्वासार्ह सेवा</p>
+<a class="btn" href="tel:7620194115">कॉल करा</a>
+<a class="btn" href="https://wa.me/919834143691">WhatsApp</a>
+</section>
+
+<section class="section">
+<input id="search" class="search" onkeyup="searchServices()" placeholder="सेवा शोधा...">
+</section>
+
+<section class="section">
+<h2>आमच्या सेवा</h2>
+<div class="grid">
+<div class="card"><h3>आधार कार्ड सेवा</h3><p>नवीन, अपडेट, मोबाईल लिंक</p><button onclick="inquire('आधार कार्ड सेवा')">चौकशी</button></div>
+<div class="card"><h3>पॅन कार्ड सेवा</h3><p>नवीन, दुरुस्ती</p><button onclick="inquire('पॅन कार्ड सेवा')">चौकशी</button></div>
+<div class="card"><h3>लर्निंग लायसन्स</h3><button onclick="inquire('लर्निंग लायसन्स')">चौकशी</button></div>
+<div class="card"><h3>ड्रायव्हिंग लायसन्स</h3><button onclick="inquire('ड्रायव्हिंग लायसन्स')">चौकशी</button></div>
+<div class="card"><h3>उत्पन्न दाखला</h3><button onclick="inquire('उत्पन्न दाखला')">चौकशी</button></div>
+<div class="card"><h3>जात प्रमाणपत्र</h3><button onclick="inquire('जात प्रमाणपत्र')">चौकशी</button></div>
+<div class="card"><h3>रहिवासी दाखला</h3><button onclick="inquire('रहिवासी दाखला')">चौकशी</button></div>
+<div class="card"><h3>पासपोर्ट सेवा</h3><button onclick="inquire('पासपोर्ट सेवा')">चौकशी</button></div>
+<div class="card"><h3>PM Kisan</h3><button onclick="inquire('PM Kisan')">चौकशी</button></div>
+<div class="card"><h3>Ayushman Card</h3><button onclick="inquire('Ayushman Card')">चौकशी</button></div>
+<div class="card"><h3>रेल्वे तिकीट</h3><button onclick="inquire('रेल्वे तिकीट')">चौकशी</button></div>
+<div class="card"><h3>बँकिंग सेवा</h3><button onclick="inquire('बँकिंग सेवा')">चौकशी</button></div>
+</div>
+</section>
+
+<section class="section">
+<h2>संपर्क</h2>
+<p>पत्ता: आंबड, नाशिक</p>
+<p>मोबाईल: 7620194115</p>
+<p>WhatsApp: 9834143691</p>
+<p>Email: durgeshkadam25@gmail.com</p>
+</section>
+
+<footer>
+© Durgesh E Seva Kendra
+</footer>
+</body>
+</html>
